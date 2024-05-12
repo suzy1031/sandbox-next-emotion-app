@@ -3,16 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "nodemon ./server/server.js",
     "build": "next build",
-    "start": "next start",
+    "start": "NODE_ENV=production node ./server/server.js",
     "lint": "next lint",
     "debug": "NODE_OPTIONS='--inspect' next dev"
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
+    "express": "^4.19.2",
     "next": "^12.3.4",
+    "node-fetch": "^2.7.0",
     "react": "18.3.1",
     "react-dom": "18.3.1"
   },
@@ -22,6 +24,7 @@
     "@types/react-dom": "18.3.0",
     "eslint": "8.57.0",
     "eslint-config-next": "14.2.3",
+    "nodemon": "^3.1.0",
     "typescript": "5.4.5"
   }
 }
